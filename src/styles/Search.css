@@ -1,0 +1,70 @@
+:root{
+--DarkBlue: hsl(209, 23%, 22%);
+--VeryDarkBlue: hsl(207, 26%, 17%);
+--VeryDarkBlueLight: hsl(200, 15%, 8%);
+--DarkGrayLight: hsl(0, 0%, 52%);
+--VeryLightGray: hsl(0, 0%, 98%);
+--White: hsl(0, 0%, 100%);
+
+}
+.link{
+    text-decoration: none;
+}
+.searchInput{
+    background-color: var(--DarkGrayLight);
+    margin: 20px;
+    padding: 10px 20px;
+    width: 320px;
+    border-radius: 4px;
+    border: none;
+    color: var(--White);
+}
+.inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown{
+    width: 180px;
+    margin:20px;
+    padding: 10px 20px;
+    color: var(--White);
+    background-color: var(--DarkGrayLight);
+    border-radius: 4px;
+}
+.searchInput::placeholder{
+    color: var(--White);
+}
+.search-container{
+    background-color: var(--VeryDarkBlue);
+    min-height: 90vh;
+
+}
+.card-container{
+    width: 280px;
+    height: 400px;
+    background-color: var(--DarkBlue);
+    border-radius: 8px;
+}
+.card-img{
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.search-allcard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.card-description{
+    margin: 0 20px;
+}
+.card-info{
+    color: var(--VeryLightGray);
+}
+.bold{
+    font-weight: bold;
+}
+
