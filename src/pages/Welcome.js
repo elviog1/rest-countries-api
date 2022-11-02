@@ -8,7 +8,6 @@ export default function Welcome() {
     <div className='welcome-container'>
         <Header />
         <Search />
-        
     </div>
   )
 }
