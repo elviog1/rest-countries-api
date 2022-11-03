@@ -1,6 +1,6 @@
-import axios from 'axios'
+
 import React, { useEffect, useRef, useState } from 'react'
-import { useAllQuery, useFilterByRegionQuery  } from '../features/countryApi'
+import { useAllQuery  } from '../features/countryApi'
 import '../styles/Search.css'
 import CardCountry from './CardCountry'
 export default function Search() {
@@ -42,8 +42,7 @@ export default function Search() {
 }
     console.log(region)
     let {data} = useAllQuery(search ? "name/" +search : "all") // si no tengo nada, devuelve todo, sino los q tengan esas letras
-    // let {dataRegion} = useFilterByRegionQuery("Europe")
-    // console.log(dataRegion)
+
     useEffect(()=>{
         if(data){ 
             setCountry(data) 
@@ -51,16 +50,9 @@ export default function Search() {
     },[data])
     
 
-    // useEffect(()=>{
-    //     axios.get(`https://restcountries.com/v3.1/region/asia`)
-    //         .then(response => setRegion(response.data))
-    //         console.log(region)
-    // },[setRegion])
-
-
   return (
     <div className='search-container'>
-        <div className='inputs'>
+        <div className='inputs '>
             <input placeholder='Search for a country...' className='searchInput' type="search" ref={searchRef} onChange={searching}/>
             <select  className='dropdown' ref={selectRef} onChange={selectRegion} >
                 <option value="Region" className='dropdown-option' >Filter by Region</option>

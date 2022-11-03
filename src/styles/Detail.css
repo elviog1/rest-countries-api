@@ -4,6 +4,7 @@
 .card-detail-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card-detail-img{
@@ -12,7 +13,8 @@
     /* margin-top: 20px; */
 }
 .card-detail-imgbox{
-    width: 500px;
+    max-width: 500px;
+    display: flex;
 }
 .card-detail-country{
     font-weight: bold;
@@ -72,4 +74,13 @@
 }
 .card-detail-borderCountry{
     color: var(--White);
+}
+
+@media (max-width:320px){
+    .card-detail-imgbox{
+        width: 320px;
+    }
+    .card-detail-img{
+        width: 320px;
+    }
 }
